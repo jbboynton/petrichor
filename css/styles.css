@@ -22,15 +22,13 @@ p {
   color: #8e9596;
 }
 
-
 h1 {
   font-family: 'Humger', sans-serif;
   font-size: 72px;
 }
 
 h2,
-form,
-label,
+h3,
 input {
   font-family: 'Roboto', sans-serif;
   font-size: 28px;
@@ -55,22 +53,72 @@ input {
 }
 
 .separator-with-opacity {
-  /* border-bottom: 3px solid #8e9596; */
   height: 3px;
   width: 100%;
   background: linear-gradient(to right, rgba(142, 149, 150, 0) 0%, rgba(142, 149, 150, 1) 49%, rgba(142, 149, 150, 0) 100%);
 }
 
-.email-sign-up {
-  margin-top: 45px;
+.big-spacer {
+  margin-top: 72px;
+}
+
+.sign-up-input {
+  color: #f4f4f4 !important;
+  font-size: 32px;
+  font-weight: bold;
   border-color: transparent;
 }
 
-.email-sign-up,
-.email-sign-up:focus {
+.sign-up-input,
+.sign-up-input:focus {
   background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
 }
 
-.email-element {
-  background-color: rgba(255, 255, 255, 0.1);
+.was-validated .form-control:invalid {
+  border-color: #deb3a8 !important;
 }
+
+.was-validated .form-control:invalid:focus {
+  box-shadow: none !important;
+}
+
+.invalid-feedback {
+  color: #deb3a8 !important;
+}
+
+.sign-up-submit,
+.sign-up-submit:hover,
+.sign-up-submit:focus,
+.sign-up-submit:active,
+.sign-up-submit:visited,
+.band-link,
+.band-link:hover,
+.band-link:focus {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.sign-up-submit {
+  font-size: 32px;
+}
+
+.band-link {
+  font-size: 22px;
+}
+
+.sign-up-submit,
+.band-link {
+  color: #8e9596;
+}
+
+.sign-up-submit:hover,
+.band-link:hover {
+  color: #f9f9f9;
+  cursor: pointer;
+}
+
