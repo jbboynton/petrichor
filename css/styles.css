@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'Humger';
+  src: url('../fonts/humger/Humger.woff2') format('woff2'),
+       url('../fonts/humger/Humger.woff') format('woff'),
+       url('../fonts/humger/Humger.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto/Roboto-Light.woff2') format('woff2'),
+       url('../fonts/roboto/Roboto-Light.woff') format('woff'),
+       url('../fonts/roboto/Roboto-Light.ttf') format('truetype');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #8e9596;
+}
+
+
+h1 {
+  font-family: 'Humger', sans-serif;
+  font-size: 72px;
+}
+
+h2,
+form,
+label,
+input {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  letter-spacing: 0.8px;
+}
+
+.page-wrapper {
+  background: url(../images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.fixed-spacer-margin {
+  width: 100vw;
+  height: 33vh;
+  overflow: hidden;
+}
+
+.separator-with-opacity {
+  /* border-bottom: 3px solid #8e9596; */
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(to right, rgba(142, 149, 150, 0) 0%, rgba(142, 149, 150, 1) 49%, rgba(142, 149, 150, 0) 100%);
+}
+
+.email-sign-up {
+  margin-top: 45px;
+  border-color: transparent;
+}
+
+.email-sign-up,
+.email-sign-up:focus {
+  background-color: transparent;
+}
+
+.email-element {
+  background-color: rgba(255, 255, 255, 0.1);
+}
