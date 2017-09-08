@@ -8,59 +8,88 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <title>Land of Fires</title>
   </head>
-  <body class="page-wrapper">
-    <div class="container">
-      <div class="row fixed-spacer-margin">&nbsp;</div>
-      <div class="row align-items-center">
-        <div class="col-9">
-          <div class="row">
-            <div class="col-9">
-              <h1>PETRICHOR</h1>
-              <h2>A new EP from Land of Fires</h2>
-              <div class="separator-with-opacity">&nbsp;</div>
-              <form action="https://www.getdrip.com/forms/160134637/submissions" method="post" data-drip-embedded-form="160134637" id="formWithValidations" novalidate>
-                <h3 hidden data-drip-attribute="headline">Sign up for Petrichor notifications</h3>
+
+  <body class="background-image-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+			<div class="container">
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main-navbar-collapse" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="./index.html">
+          <img src="images/name-logo_50x215.png" title="Land of Fires" alt="Land of Fires logo" width="215" height="50" />
+				</a>
+
+				<div class="collapse navbar-collapse navbar-top" id="main-navbar-collapse">
+					<ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="pages/band.html">Band</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:landoffiresband@gmail.com">Contact</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html">Newsletter<span class="sr-only">(current)</span></a>
+            </li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+    <div class="background-image">
+      <div class="container">
+        <div class="row fixed-spacer-margin">&nbsp;</div>
+        <div class="row align-items-center">
+          <div class="col-9">
+            <div class="row">
+              <div class="col-9">
+                <h1>PETRICHOR EP</h1>
+                <h2>New music from Land of Fires is coming soon.</h2>
+                <div class="separator-with-opacity">&nbsp;</div>
+                <form action="https://www.getdrip.com/forms/160134637/submissions" method="post" data-drip-embedded-form="160134637" id="formWithValidations" novalidate>
+                  <h3 hidden data-drip-attribute="headline">Sign up for Petrichor notifications</h3>
+                  <div class="row big-spacer">
+                    <div class="col-9">
+                      <div class="form-group">
+                        <input type="email" id="drip-email" name="fields[email]" value="" class="form-control form-control-lg sign-up-input" type="email" autofocus required />
+                        <div class="separator-with-opacity">&nbsp;</div>
+                        <div class="invalid-feedback">Please enter your email address.</div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-group">
+                        <button type="submit" name="submit" data-drip-attribute="sign-up" class="btn btn-dark sign-up-submit" title="Stay up-to-date with Land of Fires."><i class="fa fa-paper-plane"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
                 <div class="row big-spacer">
-                  <div class="col-9">
+                  <form action="https://open.spotify.com/artist/78hn6dX6DEFy5qMuQ7Sgio">
                     <div class="form-group">
-                      <input type="email" id="drip-email" name="fields[email]" value="" class="form-control form-control-lg sign-up-input" type="email" autofocus required />
-                      <div class="separator-with-opacity">&nbsp;</div>
-                      <div class="invalid-feedback">Please enter your email address.</div>
+                      <button type="submit" name="submit" class="btn btn-dark band-link"><i class="fa fa-spotify"></i></button>
                     </div>
-                  </div>
-                  <div class="col">
+                  </form>
+                  <form action="https://landoffires.bandcamp.com">
                     <div class="form-group">
-                      <button type="submit" name="submit" data-drip-attribute="sign-up" class="btn btn-dark sign-up-submit"><i class="fa fa-paper-plane"></i></button>
+                      <button type="submit" name="submit" class="btn btn-dark band-link"><i class="fa fa-bandcamp"></i></button>
                     </div>
-                  </div>
+                  </form>
+                  <form action="https://itunes.apple.com/us/album/land-of-fires-ep/id1262062949">
+                    <div class="form-group">
+                      <button type="submit" name="submit" class="btn btn-dark band-link"><i class="fa fa-apple"></i></button>
+                    </div>
+                  </form>
                 </div>
-              </form>
-              <div class="row big-spacer">
-                <form action="https://open.spotify.com/artist/78hn6dX6DEFy5qMuQ7Sgio">
-                  <div class="form-group">
-                    <button type="submit" name="submit" class="btn btn-dark band-link"><i class="fa fa-spotify"></i></button>
-                  </div>
-                </form>
-                <form action="https://landoffires.bandcamp.com">
-                  <div class="form-group">
-                    <button type="submit" name="submit" class="btn btn-dark band-link"><i class="fa fa-bandcamp"></i></button>
-                  </div>
-                </form>
-                <form action="https://itunes.apple.com/us/album/land-of-fires-ep/id1262062949">
-                  <div class="form-group">
-                    <button type="submit" name="submit" class="btn btn-dark band-link"><i class="fa fa-apple"></i></button>
-                  </div>
-                </form>
               </div>
             </div>
           </div>
+          <div class="col">
+            &nbsp;
+          </div>
         </div>
-        <div class="col">
-          &nbsp;
-        </div>
+        <div class="row fixed-spacer-margin">&nbsp;</div>
       </div>
-      <div class="row fixed-spacer-margin">&nbsp;</div>
     </div>
 
     <!-- jQuery, Popper.js, Bootstrap JS -->

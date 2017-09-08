@@ -25,30 +25,72 @@ p {
 h1 {
   font-family: 'Humger', sans-serif;
   font-size: 72px;
+  text-transform: uppercase;
+}
+
+h1.plain {
+  padding-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  letter-spacing: 0.8px;
+  text-transform: inherit;
 }
 
 h2,
 h3,
 input {
   font-family: 'Roboto', sans-serif;
-  font-size: 28px;
+  font-size: 26px;
   letter-spacing: 0.8px;
 }
 
+body {
+  background-color: #1e211f !important;
+}
+
 .page-wrapper {
-  background: url(../images/background.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.background-image-wrapper {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
 }
 
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #8e9596;
+}
+
+.navbar-top .nav-link {
+  color: #8e9596 !important;
+  font-family: 'Humger', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.navbar-top .nav-link:hover {
+  text-decoration: underline;
+}
+
+.navbar-top .active .nav-link {
+  color: #e5e5e5 !important;
+}
+
+.background-image {
+  background: url(../images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .fixed-spacer-margin {
   width: 100vw;
-  height: 33vh;
+  height: 17vh;
   overflow: hidden;
 }
 
@@ -60,6 +102,11 @@ input {
 
 .big-spacer {
   margin-top: 72px;
+}
+
+.group-photo {
+  margin-bottom: 40px;
+  padding: 0 5%;
 }
 
 .sign-up-input {
