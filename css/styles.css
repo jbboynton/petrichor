@@ -18,8 +18,32 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+small {
   color: #8e9596;
+}
+
+@media only screen and (max-width: 893px) {
+  h1 {
+    font-size: 54px !important;
+  }
+
+  h2 {
+    font-size: 20px !important;
+  }
+
+  .big-spacer {
+    margin-top: 20px !important;
+  }
+
+  .top-row,
+  .bottom-row {
+    min-height: 5vh !important;
+  }
+
+  .navbar-bottom {
+    display: none !important;
+  }
 }
 
 h1 {
@@ -48,6 +72,15 @@ body {
   background-color: #1e211f !important;
 }
 
+.top-row,
+.bottom-row {
+  min-height: 12vh;
+}
+
+.middle-row {
+  height: 60vh;
+}
+
 .page-wrapper {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -60,9 +93,21 @@ body {
 }
 
 .navbar {
+  height: 8vh;
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #8e9596;
+}
+
+@media only screen and (max-width: 892px) {
+  .navbar {
+    height: inherit;
+  }
+}
+
+.navbar-bottom {
+  border-top: 1px solid #8e9596;
+  border-bottom: none;
 }
 
 .navbar-top .nav-link {
@@ -80,7 +125,17 @@ body {
   color: #e5e5e5 !important;
 }
 
+.navbar-light .navbar-toggler {
+  color: #8e9596;
+  border-color: #8e9596;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#8e9596' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
 .background-image {
+  height: 84vh;
   background: url(../images/background.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -156,6 +211,7 @@ body {
 
 .band-link {
   font-size: 22px;
+  padding-left: 17px;
 }
 
 .sign-up-submit,

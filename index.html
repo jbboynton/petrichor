@@ -9,9 +9,24 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <title>Land of Fires</title>
+
+    <!-- Drip -->
+    <script type="text/javascript">
+      var _dcq = _dcq || [];
+      var _dcs = _dcs || {};
+      _dcs.account = '9145006';
+
+      (function() {
+        var dc = document.createElement('script');
+        dc.type = 'text/javascript'; dc.async = true;
+        dc.src = '//tag.getdrip.com/9145006.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(dc, s);
+      })();
+    </script>
   </head>
 
-  <body class="background-image-wrapper">
+  <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
 			<div class="container">
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main-navbar-collapse" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,11 +54,14 @@
 
     <div class="background-image">
       <div class="container">
-        <div class="row fixed-spacer-margin">&nbsp;</div>
-        <div class="row align-items-center">
-          <div class="col-9">
+        <div class="row top-row align-items-start">
+          <div class="col">&nbsp;</div>
+        </div>
+
+        <div class="row middle-row align-items-center">
+          <div class="col-md-9">
             <div class="row">
-              <div class="col-9">
+              <div class="col-md-9">
                 <h1>PETRICHOR EP</h1>
                 <h2>New music from Land of Fires is coming soon.</h2>
                 <div class="separator-with-opacity">&nbsp;</div>
@@ -64,33 +82,32 @@
                     </div>
                   </div>
                 </form>
-                <div class="row big-spacer">
-                  <form action="https://open.spotify.com/artist/78hn6dX6DEFy5qMuQ7Sgio">
-                    <div class="form-group">
-                      <button type="submit" name="submit" class="btn btn-dark band-link"><i class="fa fa-spotify"></i></button>
-                    </div>
-                  </form>
-                  <form action="https://landoffires.bandcamp.com">
-                    <div class="form-group">
-                      <button type="submit" name="submit" class="btn btn-dark band-link"><i class="fa fa-bandcamp"></i></button>
-                    </div>
-                  </form>
-                  <form action="https://itunes.apple.com/us/album/land-of-fires-ep/id1262062949">
-                    <div class="form-group">
-                      <button type="submit" name="submit" class="btn btn-dark band-link"><i class="fa fa-apple"></i></button>
-                    </div>
-                  </form>
+                <div class="row">
+                <!-- <div class="row big&#45;spacer"> -->
+                  <a href="https://open.spotify.com/artist/78hn6dX6DEFy5qMuQ7Sgio" target="_blank" rel="noopener" class="band-link" title="Listen to Land of Fires on Spotify"><i class="fa fa-spotify"></i></a>
+                  <a href="https://landoffires.bandcamp.com" target="_blank" rel="noopener" class="band-link" title="Listen to Land of Fires on Bandcamp"><i class="fa fa-bandcamp"></i></a>
+                  <a href="https://itunes.apple.com/us/album/land-of-fires-ep/id1262062949" target="_blank" rel="noopener" class="band-link" title="Listen to Land of Fires on Apple Music"><i class="fa fa-apple"></i></a>
+                  <a href="https://facebook.com/landoffiresband" target="_blank" rel="noopener" class="band-link" title="Like Land of Fires on Facebook"><i class="fa fa-facebook"></i></a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            &nbsp;
-          </div>
         </div>
-        <div class="row fixed-spacer-margin">&nbsp;</div>
+        <div class="row bottom-row align-items-end">
+          <div class="col">&nbsp;</div>
+        </div>
       </div>
     </div>
+
+    <footer>
+      <nav class="navbar navbar-bottom fixed-bottom navbar-expand-lg navbar-light bg-dark">
+        <div class="container">
+          <span class="navbar-text mx-auto">
+            <small>&copy; Land of Fires <script>document.write(new Date().getFullYear())</script></small>
+          </span>
+        </div>
+      </nav>
+    </footer>
 
     <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -99,7 +116,6 @@
 
     <!-- Font Awesome -->
     <script src="https://use.fontawesome.com/37ce8e25ce.js"></script>
-
 
     <!-- Bootstrap form validation -->
     <script>
@@ -116,21 +132,6 @@
           }, false);
         }, false);
       }());
-    </script>
-
-    <!-- Drip -->
-    <script type="text/javascript">
-      var _dcq = _dcq || [];
-      var _dcs = _dcs || {};
-      _dcs.account = '9145006';
-
-      (function() {
-        var dc = document.createElement('script');
-        dc.type = 'text/javascript'; dc.async = true;
-        dc.src = '//tag.getdrip.com/9145006.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(dc, s);
-      })();
     </script>
   </body>
 </html>
