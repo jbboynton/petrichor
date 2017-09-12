@@ -10,6 +10,67 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Land of Fires</title>
 
+    <!-- Waud audio library-->
+    <script type="text/javascript" src="lib/waud.js"></script>
+    <script>
+      Waud.init();
+
+      var blind = new WaudSound("audio/blind.mp3", { });
+      var old_pete = new WaudSound("audio/old_pete.mp3", { });
+      var chronostasis = new WaudSound("audio/chronostasis.mp3", { });
+      var sonoluminescence = new WaudSound("audio/sonoluminescence.mp3", { });
+
+      function toggleSong(song) {
+        var sound;
+
+        switch(song) {
+          case 'blind':
+            sound = blind;
+            break;
+          case 'old_pete':
+            sound = old_pete;
+            break;
+          case 'chronostasis':
+            sound = chronostasis;
+            break;
+          case 'sonoluminescence':
+            sound = sonoluminescence;
+            break;
+          default:
+            exit;
+        }
+
+        if (sound.isReady()) {
+          sound.togglePlay();
+          console.log('playing...');
+        } else {
+          window.alert('That song is still loading, try again in a second...');
+        }
+      }
+
+      function stopSong(sound) {
+        switch(sound) {
+          case 'blind':
+            sound = blind;
+            break;
+          case 'old_pete':
+            sound = old_pete;
+            break;
+          case 'chronostasis':
+            sound = chronostasis;
+            break;
+          case 'sonoluminescence':
+            sound = sonoluminescence;
+            break;
+          default:
+            exit;
+        }
+
+        sound.stop();
+        console.log('stopping...');
+      }
+    </script>
+
     <!-- Drip -->
     <script type="text/javascript">
       var _dcq = _dcq || [];
@@ -38,6 +99,41 @@
 
 				<div class="collapse navbar-collapse navbar-top" id="main-navbar-collapse">
 					<ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle song-menu-link" href="#" id="songMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-play"></i><i class="fa fa-pause"></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="songMenuLink">
+								<div class="dropdown-item btn-group justify-content-between" role="group" aria-label="Play, pause or stop Blind by Land of Fires.">
+                  <span class="player-track-title">Blind</span>
+                  <div>
+                    <button type="button" class="band-link player-link" title="Play or Pause"><i class="fa fa-play" onclick="toggleSong('blind')"></i><i class="fa fa-pause"></i></button>
+                    <button type="button" class="band-link player-link" title="Stop"><i class="fa fa-stop" onclick="stopSong('blind')"></i></button>
+                  </div>
+                </div>
+								<div class="dropdown-item btn-group justify-content-between" role="group" aria-label="Play, pause or stop Old Pete by Land of Fires.">
+                  <span class="player-track-title">Old Pete</span>
+                  <div>
+                    <button type="button" class="band-link player-link" title="Play or Pause" onclick="toggleSong('old_pete')"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
+                    <button type="button" class="band-link player-link" title="Stop" onclick="stopSong('old_pete')"><i class="fa fa-stop"></i></button>
+                  </div>
+								</div>
+								<div class="dropdown-item btn-group justify-content-between" role="group" aria-label="Play, pause or stop Chronostasis by Land of Fires.">
+                  <span class="player-track-title">Chronostasis</span>
+                  <div>
+                    <button type="button" class="band-link player-link" title="Play or Pause" onclick="toggleSong('chronostasis')"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
+                    <button type="button" class="band-link player-link" title="Stop" onclick="stopSong('chronostasis')"><i class="fa fa-stop"></i></button>
+                  </div>
+								</div>
+								<div class="dropdown-item btn-group justify-content-between" role="group" aria-label="Play, pause or stop Sonoluminescence by Land of Fires.">
+                  <span class="player-track-title">Sonoluminescence</span>
+                  <div>
+                    <button type="button" class="band-link player-link" title="Play or Pause" onclick="toggleSong('sonoluminescence')"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
+                    <button type="button" class="band-link player-link" title="Stop" onclick="stopSong('sonoluminescence')"><i class="fa fa-stop"></i></button>
+                  </div>
+								</div>
+              </div>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="pages/band.html">Band</a>
             </li>
@@ -75,15 +171,14 @@
                         <div class="invalid-feedback">Please enter your email address.</div>
                       </div>
                     </div>
-                    <div class="col">
+                    <div class="col-md-9">
                       <div class="form-group">
-                        <button type="submit" name="submit" data-drip-attribute="sign-up" class="btn btn-dark sign-up-submit" title="Stay up-to-date with Land of Fires."><i class="fa fa-paper-plane"></i></button>
+                        <button type="submit" name="submit" data-drip-attribute="sign-up" class="btn btn-dark sign-up-submit" title="Stay up-to-date with Land of Fires.">Sign Up</button>
                       </div>
                     </div>
                   </div>
                 </form>
                 <div class="row">
-                <!-- <div class="row big&#45;spacer"> -->
                   <a href="https://open.spotify.com/artist/78hn6dX6DEFy5qMuQ7Sgio" target="_blank" rel="noopener" class="band-link" title="Listen to Land of Fires on Spotify"><i class="fa fa-spotify"></i></a>
                   <a href="https://landoffires.bandcamp.com" target="_blank" rel="noopener" class="band-link" title="Listen to Land of Fires on Bandcamp"><i class="fa fa-bandcamp"></i></a>
                   <a href="https://itunes.apple.com/us/album/land-of-fires-ep/id1262062949" target="_blank" rel="noopener" class="band-link" title="Listen to Land of Fires on Apple Music"><i class="fa fa-apple"></i></a>

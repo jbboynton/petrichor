@@ -134,6 +134,42 @@ body {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#8e9596' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+.nav-link.song-menu-link,
+.nav-link.song-menu-link:hover {
+  text-decoration: none !important;
+}
+
+.dropdown-toggle::after {
+  color: #343a40;
+}
+
+.dropdown-toggle:hover::after {
+  color: #8e9596;
+}
+
+.dropdown-menu {
+  background-color: #343a40;
+}
+
+.dropdown-item {
+  padding: 0.25rem 1.25rem;
+}
+
+.dropdown-item,
+.dropdown-item:hover,
+.dropdown-item:active {
+  background-color: #343a40;
+}
+
+.player-track-title {
+  padding-right: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #8e9596;
+  text-transform: uppercase;
+}
+
 .background-image {
   height: 84vh;
   background: url(../images/background.jpg) no-repeat center center fixed;
@@ -201,12 +237,26 @@ body {
 .band-link:hover,
 .band-link:focus {
   background-color: transparent;
-  border: none;
   box-shadow: none;
+  color: #8e9596;
+  cursor: pointer;
+}
+
+.band-link,
+.band-link:hover,
+.band-link:focus {
+  border: none;
 }
 
 .sign-up-submit {
-  font-size: 32px;
+  padding: 11px 21px;
+  font-size: 20px;
+  border: 1px solid #8e9596;
+  border-radius: 1px;
+}
+
+.sign-up-submit:hover {
+  border: 1px solid #f9f9f9;
 }
 
 .band-link {
@@ -214,14 +264,13 @@ body {
   padding-left: 17px;
 }
 
-.sign-up-submit,
-.band-link {
-  color: #8e9596;
-}
-
 .sign-up-submit:hover,
 .band-link:hover {
   color: #f9f9f9;
-  cursor: pointer;
 }
 
+.player-link,
+.player-track-title {
+  font-size: 16px;
+  padding-left: 3px;;
+}
