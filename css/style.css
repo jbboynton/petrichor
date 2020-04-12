@@ -1,0 +1,73 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #91a89a;
+}
+
+h1 {
+  color: #91a89a;
+  letter-spacing: -0.5px;
+  text-shadow: -2px 1px 12px rgba(17, 17, 21, 0.73);
+}
+
+.bg {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bg-opacity {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(7, 12, 8, 0.5);
+}
+
+.inner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.sections section {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.links a {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+@media only screen and (min-width: 576px) {
+  .links a {
+    margin-top: unset;
+    margin-bottom: unset;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .links a {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+.links svg {
+  fill: #91a89a;
+  height: 48px;
+  width: 48px;
+}

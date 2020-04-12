@@ -1,233 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png?v=QEGkyQG2l3">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png?v=QEGkyQG2l3">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png?v=QEGkyQG2l3">
+    <link rel="manifest" href="images/favicons/site.webmanifest?v=QEGkyQG2l3">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg?v=QEGkyQG2l3" color="#111115">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico?v=QEGkyQG2l3">
+    <meta name="msapplication-TileColor" content="#111115">
+    <meta name="msapplication-config" content="images/favicons/browserconfig.xml?v=QEGkyQG2l3">
+    <meta name="theme-color" content="#111115">
+    <script src="js/schema.js"></script>
     <title>Land of Fires</title>
-
-    <!-- Waud audio library-->
-    <script type="text/javascript" src="lib/waud.js"></script>
-    <script>
-      Waud.init();
-
-      var blind = new WaudSound("audio/blind.mp3", { });
-      var old_pete = new WaudSound("audio/old_pete.mp3", { });
-      var chronostasis = new WaudSound("audio/chronostasis.mp3", { });
-      var sonoluminescence = new WaudSound("audio/sonoluminescence.mp3", { });
-
-      function toggleSong(song) {
-        var sound;
-
-        switch(song) {
-          case 'blind':
-            sound = blind;
-            break;
-          case 'old_pete':
-            sound = old_pete;
-            break;
-          case 'chronostasis':
-            sound = chronostasis;
-            break;
-          case 'sonoluminescence':
-            sound = sonoluminescence;
-            break;
-          default:
-            exit;
-        }
-
-        if (sound.isReady()) {
-          sound.togglePlay();
-          console.log('playing...');
-        } else {
-          window.alert('That song is still loading, try again in a second...');
-        }
-      }
-
-      function stopSong(sound) {
-        switch(sound) {
-          case 'blind':
-            sound = blind;
-            break;
-          case 'old_pete':
-            sound = old_pete;
-            break;
-          case 'chronostasis':
-            sound = chronostasis;
-            break;
-          case 'sonoluminescence':
-            sound = sonoluminescence;
-            break;
-          default:
-            exit;
-        }
-
-        sound.stop();
-        console.log('stopping...');
-      }
-    </script>
-
-    <!-- Drip -->
-    <script type="text/javascript">
-      var _dcq = _dcq || [];
-      var _dcs = _dcs || {};
-      _dcs.account = '9145006';
-
-      (function() {
-        var dc = document.createElement('script');
-        dc.type = 'text/javascript'; dc.async = true;
-        dc.src = '//tag.getdrip.com/9145006.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(dc, s);
-      })();
-    </script>
   </head>
-
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-			<div class="container">
-				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main-navbar-collapse" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<a class="navbar-brand" href="./index.html">
-          <img src="images/name-logo_50x215.png" title="Land of Fires" alt="Land of Fires logo" width="215" height="50" />
-				</a>
-
-				<div class="collapse navbar-collapse navbar-top" id="main-navbar-collapse">
-					<ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle song-menu-link" href="#" id="songMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-play"></i><i class="fa fa-pause"></i>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="songMenuLink">
-								<div class="dropdown-item btn-group justify-content-between" role="group" aria-label="Play, pause or stop Blind by Land of Fires.">
-                  <span class="player-track-title">Blind</span>
-                  <div>
-                    <button type="button" class="band-link player-link" title="Play or Pause"><i class="fa fa-play" onclick="toggleSong('blind')"></i><i class="fa fa-pause"></i></button>
-                    <button type="button" class="band-link player-link" title="Stop"><i class="fa fa-stop" onclick="stopSong('blind')"></i></button>
-                  </div>
-                </div>
-								<div class="dropdown-item btn-group justify-content-between" role="group" aria-label="Play, pause or stop Old Pete by Land of Fires.">
-                  <span class="player-track-title">Old Pete</span>
-                  <div>
-                    <button type="button" class="band-link player-link" title="Play or Pause" onclick="toggleSong('old_pete')"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
-                    <button type="button" class="band-link player-link" title="Stop" onclick="stopSong('old_pete')"><i class="fa fa-stop"></i></button>
-                  </div>
-								</div>
-								<div class="dropdown-item btn-group justify-content-between" role="group" aria-label="Play, pause or stop Chronostasis by Land of Fires.">
-                  <span class="player-track-title">Chronostasis</span>
-                  <div>
-                    <button type="button" class="band-link player-link" title="Play or Pause" onclick="toggleSong('chronostasis')"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
-                    <button type="button" class="band-link player-link" title="Stop" onclick="stopSong('chronostasis')"><i class="fa fa-stop"></i></button>
-                  </div>
-								</div>
-								<div class="dropdown-item btn-group justify-content-between" role="group" aria-label="Play, pause or stop Sonoluminescence by Land of Fires.">
-                  <span class="player-track-title">Sonoluminescence</span>
-                  <div>
-                    <button type="button" class="band-link player-link" title="Play or Pause" onclick="toggleSong('sonoluminescence')"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
-                    <button type="button" class="band-link player-link" title="Stop" onclick="stopSong('sonoluminescence')"><i class="fa fa-stop"></i></button>
-                  </div>
-								</div>
+    <div class="bg">
+      <img src="images/background.jpg">
+      <div class="bg-opacity">
+        <div class="inner">
+          <div class="h-100 d-flex flex-column align-items-center justify-content-center sections">
+            <section class="d-none d-sm-block">
+              <h1 class="text-lowercase text-monospace">Land of Fires</h1>
+            </section>
+            <section class="links">
+              <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                <a href="https://open.spotify.com/artist/78hn6dX6DEFy5qMuQ7Sgio" target="_blank" rel="noopener" class="band-link" title="Listen to Land of Fires on Spotify">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.69 56.69">
+                    <path d="M28.341 3.813c-13.593 0-24.613 11.019-24.613 24.612s11.02 24.613 24.613 24.613c13.594 0 24.613-11.02 24.613-24.613S41.934 3.813 28.341 3.813zm9.985 36.227c-.398 0-.67-.138-1.041-.365-3.568-2.158-8.015-3.292-12.736-3.292-2.634 0-5.284.337-7.763.853-.403.088-.91.244-1.214.244a1.537 1.537 0 01-1.558-1.547c0-1.035.597-1.549 1.34-1.691 3.04-.693 6.067-1.088 9.212-1.088 5.385 0 10.186 1.235 14.316 3.71.615.36.975.726.975 1.637 0 .887-.721 1.539-1.53 1.539zm2.682-6.515c-.534 0-.87-.215-1.233-.426-4.003-2.376-9.552-3.955-15.63-3.955-3.116 0-5.806.436-8.032 1.03-.48.131-.75.273-1.198.273a1.927 1.927 0 01-1.923-1.93c0-1.046.508-1.767 1.531-2.055 2.767-.76 5.592-1.346 9.705-1.346 6.442 0 12.675 1.605 17.575 4.537.821.471 1.124 1.069 1.124 1.945a1.915 1.915 0 01-1.919 1.927zm3.054-7.576c-.501 0-.799-.122-1.268-.38-4.455-2.67-11.369-4.142-18.055-4.142-3.337 0-6.727.34-9.832 1.182-.358.09-.81.27-1.263.27-1.312 0-2.32-1.04-2.32-2.352 0-1.338.83-2.089 1.724-2.353 3.508-1.033 7.424-1.515 11.682-1.515 7.227 0 14.831 1.487 20.386 4.749.748.424 1.268 1.063 1.268 2.235 0 1.342-1.079 2.306-2.322 2.306z"/>
+                  </svg>
+                  <span class="sr-only">Listen to Land of Fires on Spotify</span>
+                </a>
+                <a href="https://instagram.com/landoffires" target="_blank" rel="noopener" title="Follow Land of Fires on Instagram">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.7 56.7">
+                    <circle cx="28.1" cy="30" r="4.4"/>
+                    <path d="M33.6 19.2h-11c-1.6 0-3 .5-3.9 1.4-.9.9-1.4 2.3-1.4 3.9v11c0 1.6.5 3 1.5 4 1 .9 2.3 1.4 3.9 1.4h10.9c1.6 0 3-.5 3.9-1.4 1-.9 1.5-2.3 1.5-3.9v-11c0-1.6-.5-2.9-1.4-3.9-1-1-2.3-1.5-4-1.5zm-5.5 17.6c-3.8 0-6.8-3.1-6.8-6.8 0-3.8 3.1-6.8 6.8-6.8s6.9 3 6.9 6.8-3.1 6.8-6.9 6.8zm7.1-12.3c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6 1.6.7 1.6 1.6-.7 1.6-1.6 1.6z"/>
+                    <path d="M28.3 5.2c-13.6 0-24.6 11-24.6 24.6 0 13.6 11 24.6 24.6 24.6 13.6 0 24.6-11 24.6-24.6.1-13.6-11-24.6-24.6-24.6zm13.1 30.4c0 2.3-.8 4.3-2.2 5.7-1.4 1.4-3.4 2.1-5.6 2.1H22.7c-2.2 0-4.2-.7-5.6-2.1-1.5-1.4-2.2-3.4-2.2-5.7v-11c0-4.6 3.1-7.8 7.8-7.8h11c2.3 0 4.2.8 5.6 2.2 1.4 1.4 2.1 3.3 2.1 5.6v11z"/>
+                  </svg>
+                  <span class="sr-only">Follow Land of Fires on Instagram</span>
+                </a>
+                <a href="https://landoffires.bandcamp.com" target="_blank" rel="noopener" title="Listen to Land of Fires on Bandcamp">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97.236 97.236">
+                    <path d="M0 78.075h70.006l27.23-58.914H27.23z"/>
+                  </svg>
+                  <span class="sr-only">Listen to Land of Fires on Bandcamp</span>
+                </a>
+                <section class="d-block d-sm-none">
+                  <h1 class="text-lowercase text-monospace">Land of Fires</h1>
+                </section>
+                <a href="https://facebook.com/landoffiresband" target="_blank" rel="noopener" title="Like Land of Fires on Facebook">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67 67">
+                    <path d="M28.765 50.32h6.744V33.998h4.499l.596-5.624h-5.095l.007-2.816c0-1.466.14-2.253 2.244-2.253h2.812V17.68h-4.5c-5.405 0-7.307 2.729-7.307 7.317v3.377h-3.369v5.625h3.369V50.32zM33 64C16.432 64 3 50.568 3 34 3 17.431 16.432 4 33 4s30 13.431 30 30c0 16.568-13.432 30-30 30z">
+                  </svg>
+                  <span class="sr-only">Like Land of Fires on Facebook</span>
+                </a>
+                <a href="https://twitter.com/landoffiresband" target="_blank" rel="noopener" title="Tweet at Land of Fires on Twitter">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.693 56.693">
+                    <path d="M28.348 5.157c-13.6 0-24.625 11.027-24.625 24.625 0 13.6 11.025 24.623 24.625 24.623s24.623-11.023 24.623-24.623c0-13.598-11.024-24.625-24.623-24.625zm12.404 19.66c.013.266.018.533.018.803 0 8.201-6.242 17.656-17.656 17.656a17.572 17.572 0 01-9.513-2.787c.486.057.979.086 1.48.086a12.45 12.45 0 007.707-2.656 6.214 6.214 0 01-5.796-4.311 6.06 6.06 0 001.167.111c.566 0 1.114-.074 1.635-.217a6.21 6.21 0 01-4.979-6.084l.001-.08a6.184 6.184 0 002.811.777 6.204 6.204 0 01-2.761-5.166c0-1.137.306-2.204.84-3.12a17.618 17.618 0 0012.792 6.483 6.206 6.206 0 016.045-7.619 6.2 6.2 0 014.529 1.959 12.395 12.395 0 003.941-1.506 6.223 6.223 0 01-2.73 3.433 12.407 12.407 0 003.565-.977 12.537 12.537 0 01-3.096 3.215z"/>
+                  </svg>
+                  <span class="sr-only">Tweet at Land of Fires on Twitter</span>
+                </a>
+                <a href="https://soundcloud.com/landoffiresband" target="_blank" rel="noopener" title="Listen to Land of Fires on SoundCloud">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.693 56.693">
+                    <path d="M28.348 5.158c-13.6 0-24.625 11.023-24.625 24.623 0 13.6 11.025 24.625 24.625 24.625 13.598 0 24.623-11.025 24.623-24.625S41.945 5.158 28.348 5.158zM11.847 33.124c-.011.078-.068.133-.138.133-.072 0-.128-.055-.138-.133l-.252-1.885.252-1.916c.01-.08.066-.137.138-.137.07 0 .127.057.138.137l.299 1.916-.299 1.885zm1.281 1.147c-.012.082-.071.139-.144.139s-.133-.059-.144-.141l-.339-3.029.339-3.1c.01-.08.071-.139.144-.139s.132.057.144.139l.385 3.1-.385 3.031zm1.385.513c-.01.096-.083.168-.173.168-.091 0-.164-.072-.173-.17l-.322-3.543.322-3.676c.009-.1.082-.172.173-.172.089 0 .163.072.173.172l.366 3.676-.366 3.545zm1.396.11c-.01.115-.097.199-.202.199a.206.206 0 01-.203-.199l-.304-3.653.305-3.777c.008-.115.095-.201.203-.201.105 0 .191.086.202.199l.345 3.779-.346 3.653zm1.407.031c-.009.131-.108.229-.231.229a.234.234 0 01-.232-.229l-.287-3.684.287-3.504c.008-.131.107-.23.232-.23.123 0 .223.098.231.227l.326 3.508-.326 3.683zm1.419.002v-.002a.268.268 0 01-.261.26.266.266 0 01-.261-.258l-.27-3.686.27-5.701a.266.266 0 01.261-.258c.138 0 .253.113.261.258l.306 5.701-.306 3.686zm1.429-.022v-.002c-.008.162-.135.287-.291.287s-.284-.125-.291-.285l-.252-3.662.252-7.006c.007-.162.135-.287.291-.287s.283.125.291.287l.285 7.006-.285 3.662zm1.441-.037v-.002a.324.324 0 01-.32.316.322.322 0 01-.32-.314l-.235-3.625.235-7.59a.323.323 0 01.32-.318c.172 0 .312.141.32.318l.265 7.59-.265 3.625zm1.452-.025v.004-.002c-.008.195-.16.346-.35.346s-.344-.152-.35-.344l-.217-3.604.217-7.846a.351.351 0 01.35-.346c.19 0 .344.15.35.346l.245 7.846-.245 3.602v-.002zm1.463-.031v-.002a.383.383 0 01-.379.379.38.38 0 01-.379-.377l-.2-3.568.2-7.645a.38.38 0 01.379-.377.38.38 0 01.379.377l.225 7.645-.225 3.568zm1.474-.022v-.004a.412.412 0 01-.408.408.41.41 0 01-.409-.404l-.183-3.545.183-7.367a.409.409 0 01.817-.002l.204 7.369-.204 3.545zm1.485-.023v-.002a.445.445 0 01-.438.438.443.443 0 01-.438-.436l-.166-3.523.166-8.764a.442.442 0 01.438-.436c.236 0 .434.196.438.436l.185 8.766-.185 3.521zm1.478-.049v-.004c-.004.256-.213.465-.467.465s-.465-.209-.468-.463l-.191-3.471.191-9.559c.003-.257.214-.467.468-.467s.463.21.467.466l.209 9.56-.209 3.473zm12.624.492c-.075 0-11.754-.004-11.765-.006a.514.514 0 01-.459-.502v-13.47c.004-.248.088-.375.409-.5a7.603 7.603 0 012.716-.508c3.912 0 7.119 3.001 7.457 6.826a4.254 4.254 0 011.642-.328 4.244 4.244 0 110 8.488z"/>
+                  </svg>
+                  <span class="sr-only">Listen to Land of Fires on SoundCloud</span>
+                </a>
               </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pages/band.html">Band</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="mailto:landoffiresband@gmail.com">Contact</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="./index.html">Newsletter<span class="sr-only">(current)</span></a>
-            </li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-
-    <div class="background-image">
-      <div class="container">
-        <div class="row top-row align-items-start">
-          <div class="col">&nbsp;</div>
-        </div>
-
-        <div class="row middle-row align-items-center">
-          <div class="col-md-9">
-            <div class="row">
-              <div class="col-md-9">
-                <h1>PETRICHOR EP</h1>
-                <h2>New music from Land of Fires is coming soon.</h2>
-                <div class="separator-with-opacity">&nbsp;</div>
-                <form action="https://www.getdrip.com/forms/160134637/submissions" method="post" data-drip-embedded-form="160134637" id="formWithValidations" novalidate>
-                  <h3 hidden data-drip-attribute="headline">Sign up for Petrichor notifications</h3>
-                  <div class="row big-spacer">
-                    <div class="col-9">
-                      <div class="form-group">
-                        <input type="email" id="drip-email" name="fields[email]" value="" class="form-control form-control-lg sign-up-input" type="email" autofocus required />
-                        <div class="separator-with-opacity">&nbsp;</div>
-                        <div class="invalid-feedback">Please enter your email address.</div>
-                      </div>
-                    </div>
-                    <div class="col-md-9">
-                      <div class="form-group">
-                        <button type="submit" name="submit" data-drip-attribute="sign-up" class="btn btn-dark sign-up-submit" title="Stay up-to-date with Land of Fires.">Sign Up</button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-                <div class="row">
-                  <a href="https://open.spotify.com/artist/78hn6dX6DEFy5qMuQ7Sgio" target="_blank" rel="noopener" class="band-link" title="Listen to Land of Fires on Spotify"><i class="fa fa-spotify"></i></a>
-                  <a href="https://landoffires.bandcamp.com" target="_blank" rel="noopener" class="band-link" title="Listen to Land of Fires on Bandcamp"><i class="fa fa-bandcamp"></i></a>
-                  <a href="https://itunes.apple.com/us/album/land-of-fires-ep/id1262062949" target="_blank" rel="noopener" class="band-link" title="Listen to Land of Fires on Apple Music"><i class="fa fa-apple"></i></a>
-                  <a href="https://facebook.com/landoffiresband" target="_blank" rel="noopener" class="band-link" title="Like Land of Fires on Facebook"><i class="fa fa-facebook"></i></a>
-                </div>
-              </div>
-            </div>
+            </section>
           </div>
-        </div>
-        <div class="row bottom-row align-items-end">
-          <div class="col">&nbsp;</div>
         </div>
       </div>
     </div>
-
-    <footer>
-      <nav class="navbar navbar-bottom fixed-bottom navbar-expand-lg navbar-light bg-dark">
-        <div class="container">
-          <span class="navbar-text mx-auto">
-            <small>&copy; Land of Fires <script>document.write(new Date().getFullYear())</script></small>
-          </span>
-        </div>
-      </nav>
-    </footer>
-
-    <!-- jQuery, Popper.js, Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-
-    <!-- Font Awesome -->
-    <script src="https://use.fontawesome.com/37ce8e25ce.js"></script>
-
-    <!-- Bootstrap form validation -->
-    <script>
-      (function() {
-        "use strict";
-        window.addEventListener("load", function() {
-          var form = document.getElementById("formWithValidations");
-          form.addEventListener("submit", function(e) {
-            if (form.checkValidity() == false) {
-              e.preventDefault();
-              e.stopPropagation();
-            }
-            form.classList.add("was-validated");
-          }, false);
-        }, false);
-      }());
-    </script>
   </body>
 </html>
-
