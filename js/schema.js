@@ -7,11 +7,11 @@
     "description": "Land of Fires is an instrumental rock band from Rhode Island that delivers a melodic sound that ranges from roaring, powerful, and thunderous to emotional, expressive, and euphonic.",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.landoffires.com/images/logo-v1.jpg"
+      "url": "https://www.landoffires.com/images/logo.png"
     },
     "image": {
       "@type": "ImageObject",
-      "url": "https://www.landoffires.com/images/band-v1.jpg"
+      "url": "https://www.landoffires.com/images/band.jpg"
     },
     "url": "https://www.landoffires.com",
     "genre": [
@@ -19,12 +19,13 @@
       "Instrumental Rock"
     ],
     "sameAs": [
-      "https://www.facebook.com/landoffiresband",
-      "https://twitter.com/landoffiresband",
       "https://instagram.com/landoffires",
-      "https://soundcloud.com/landoffiresband",
+      "https://itunes.apple.com/us/artist/land-of-fires/1262063264"
       "https://landoffires.bandcamp.com",
-      "https://open.spotify.com/artist/78hn6dX6DEFy5qMuQ7Sgio"
+      "https://open.spotify.com/artist/78hn6dX6DEFy5qMuQ7Sgio",
+      "https://soundcloud.com/landoffiresband",
+      "https://twitter.com/landoffiresband",
+      "https://www.facebook.com/landoffiresband",
     ]
   };
 
