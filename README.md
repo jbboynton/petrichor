@@ -2,4 +2,4 @@
 
 ## Color scheme
 
-![Color palette](https://github.com/jbboynton/petrichor/tree/master/images/palette.png "Color palette")
+![Color palette](images/palette.png "Color palette")
