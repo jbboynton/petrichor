@@ -113,6 +113,10 @@ h2 {
   line-height: 1.38;
 }
 
+.resources p {
+  font-family: "Source Code Pro", monospace;
+}
+
 .resources li {
   line-height: 1.28;
   margin-bottom: 7px;
