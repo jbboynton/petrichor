@@ -121,12 +121,13 @@
           `${description}.`;
 
         document.getElementById("song-ideas").innerHTML +=
-          `<section class="resources p-0 py-4 my-4 p-sm-4">
+          `<section class="text-bg p-0 py-4 my-4 p-sm-4 round">
             <div class="d-flex flex-column">
               <div class="d-flex flex-column align-items-center justify-content-center">
-                <p class="text-center mb-0">Sketch an idea for a song called "${name}".</p>
-                <p class="text-center mb-0">Time signature is ${time} and tempo is ${tempo}.</p>
-                <p class="text-center mb-0">Make it sound ${description}.</p>
+                <p class="text-center mb-2">
+                  Sketch an idea for a song called "${name}". Time signature is
+                  ${time} and tempo is ${tempo}. Make it sound ${description}.
+                </p>
               </div>
             </div>
           </section>`;
@@ -142,14 +143,14 @@
             <section>
               <h1 class="text-lowercase text-monospace py-2">Song <span class="yeeter">☞</span> Machine</h1>
             </section>
-            <section class="p-0 py-4 mb-0 p-sm-4">
-              <div class="d-flex flex-column">
-                <div class="d-flex flex-column align-items-center justify-content-center">
+            <section class="resources p-0 py-4 mb-0 p-sm-4">
+              <section class="d-flex flex-column">
+                <div class="d-flex flex-column align-items-center justify-content-center mb-3">
                   <button class="btn btn-outline-light text-monospace" onclick="newSongIdea()">inspire me</button>
                 </div>
-              </div>
+              </section>
+              <section id="song-ideas"></section>
             </section>
-            <section id="song-ideas"></section>
           </div>
         </div>
       </div>
