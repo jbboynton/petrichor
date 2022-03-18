@@ -20,12 +20,12 @@
     <meta name="robots" content="noindex">
     <title>Song Machine</title>
     <script>
-      var articles = ["The", "Some", "One", "All", "Any"];
+      var articles = ["The", "Some", "One", "All"];
       var punctuationA = [","];
       var punctuationB = ["...", "!", "."];
       var punctuationC = [",", "...", "!", ":"];
       var conjunctions = [
-        "Or", "But", "And", "And Yet", "With", "Without"
+        "Or", "But", "And", "Yet", "With", "Without"
       ];
       var nouns = [
         "Forest", "Grove", "Quiet", "Grace", "Child", "Despair", "Hollow",
@@ -99,13 +99,18 @@
           rand(gerunds),
           rand(adjectives) + ", " + rand(adjectives) + " " + rand(nouns),
           rand(nouns) + " " + rand(nouns),
-          rand(conjunctions) + " " + rand(nouns) + " " + rand(verbs),
+          rand(nouns) + " " + rand(verbs),
           rand(verbs) + " and " + rand(verbs),
           rand(verbs) + rand(punctuationB) + " " + rand(verbs) +
             rand(punctuationB),
           rand(conjunctions) + " " + rand(gerunds) + " " + rand(nouns) + " " +
             rand(verbs),
           rand(gerunds) + " and " + rand(adjectives),
+          rand(articles) + " " + rand(gerunds),
+          "The " + rand(adjectives) + " " + rand(nouns),
+          "The " + rand(gerunds),
+          "The " + rand(adjectives),
+          rand(adjectives) + " " + rand(nouns),
           rand(articles) + " " + rand(gerunds),
         ]);
       }
