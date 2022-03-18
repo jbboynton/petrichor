@@ -96,6 +96,17 @@ h2 {
   border-radius: 38px;
 }
 
+.newest {
+  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+  border: 1px solid #f8f9fa;
+  transition: border-color 2.15s ease-in-out, box-shadow 2.15s ease-in-out;
+}
+
+.newest-fade {
+  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0);
+  border: 1px solid rgba(248, 249, 250, 0);
+}
+
 .resources {
   position: relative;
   border-radius: unset;

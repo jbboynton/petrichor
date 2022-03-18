@@ -25,7 +25,8 @@
       var punctuationB = ["...", "!", "."];
       var punctuationC = [",", "...", "!", ":"];
       var conjunctions = [
-        "Or", "But", "And", "So", "Still", "Yet", "While", "Nor", "With"
+        "Or", "But", "And", "But So", "But Still", "And Yet", "And With",
+        "And Without"
       ];
       var nouns = [
         "Forest", "Grove", "Quiet", "Grace", "Child", "Despair", "Hollow",
@@ -62,9 +63,9 @@
         "fat", "sophishticated", "brootal", "bouncy", "stilted", "mechanical",
         "hopeful", "soulful", "changeable", "unpleasant", "uncomfortable",
         "amarous", "heavy", "industrial", "listless", "wild", "empty",
-        "like elevator music", "old-fashioned", "soothing", "childish",
-        "soaring", "scary", "contemplative", "like the natural world",
-        "experimental", "catchy", "so bad it's good", "like war"
+        "old-fashioned", "soothing", "childish", "soaring", "scary",
+        "contemplative", "like the natural world", "experimental", "catchy",
+        "like war"
       ];
       var timeSignatures = [
         "3/4", "3/4", "3/4", "3/4", "3/4", "3/4", "3/4", "3/4", "3/4", "3/4",
@@ -120,7 +121,14 @@
           `signature is ${time} and tempo is ${tempo}.<br>Make it sound ` +
           `${description}.`;
 
-        document.getElementById("song-ideas").innerHTML +=
+        var songIdeas = document.getElementById("song-ideas");
+
+        for (var i = 0; i < songIdeas.children.length; i++) {
+          songIdeas.children[i].classList.remove("newest");
+          songIdeas.children[i].classList.remove("newest-fade");
+        }
+
+        songIdeas.innerHTML =
           `<section class="text-bg p-0 py-4 my-4 p-sm-4 round">
             <div class="d-flex flex-column">
               <div class="d-flex flex-column align-items-center justify-content-center">
@@ -130,7 +138,12 @@
                 </p>
               </div>
             </div>
-          </section>`;
+          </section>` + songIdeas.innerHTML;
+
+        songIdeas.firstChild.classList.add("newest");
+        setTimeout(function() {
+          songIdeas.firstChild.classList.add("newest-fade");
+        }, 3000);
       }
     </script>
   </head>
