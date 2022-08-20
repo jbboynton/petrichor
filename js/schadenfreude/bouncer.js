@@ -96,12 +96,13 @@ function setAuthCookie() {
     decodeURIComponent(new URLSearchParams(window.location.search)
       .get("returnPath"));
 
-  document.cookie = `post=rock; path=/; expires=${expirationDate()}`;
+  document.cookie =
+    `post=rock; path=/; domain=www.landoffires.com; expires=${expires()}`;
 
   window.location.assign(returnPath);
 }
 
-function expirationDate() {
+function expires() {
   const daysUntilExpiration = 7;
   const currentDate = new Date();
   const expirationDate = currentDate.getDate() + daysUntilExpiration;
