@@ -1,4 +1,4 @@
-(function(){
+(function() {
   var data = {
     "@context": "http://schema.org",
     "@type": "MusicGroup",
