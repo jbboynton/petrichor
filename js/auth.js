@@ -1,3 +1,9 @@
+document.addEventListener('DOMContentLoaded', () => {
+  'use strict';
+
+  hmmmmm();
+});
+
 function hmmmmm() {
   if (cookied()) return;
 
@@ -8,11 +14,7 @@ function hmmmmm() {
 }
 
 function cookied() {
-  const cookie = decodeURIComponent(document.cookie)
-    .split(';')
-    .map(crumb => crumb.trim());
+  const post = window.localStorage.getItem("post");
 
-  return cookie.includes("post=rock");
+  return post === "rock";
 }
-
-hmmmmm();

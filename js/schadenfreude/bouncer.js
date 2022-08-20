@@ -96,10 +96,8 @@ function setAuthCookie() {
     decodeURIComponent(new URLSearchParams(window.location.search)
       .get("returnPath"));
 
-  document.cookie =
-    `post=rock; path=/; domain=www.landoffires.com; expires=${expires()}`;
+  window.localStorage.setItem("post", "rock");
 
-  alert(document.cookie);
   window.location.assign(returnPath);
 }
 
