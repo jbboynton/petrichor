@@ -99,6 +99,7 @@ function setAuthCookie() {
   document.cookie =
     `post=rock; path=/; domain=www.landoffires.com; expires=${expires()}`;
 
+  alert(document.cookie);
   window.location.assign(returnPath);
 }
 
