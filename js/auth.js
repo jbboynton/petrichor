@@ -1,9 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-  'use strict';
-
-  hmmmmm();
-});
-
 function hmmmmm() {
   if (cookied()) return;
 
@@ -18,3 +12,5 @@ function cookied() {
 
   return post === "rock";
 }
+
+hmmmmm();
