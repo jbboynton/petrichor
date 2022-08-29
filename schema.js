@@ -20,12 +20,12 @@
     ],
     "sameAs": [
       "https://instagram.com/landoffires",
-      "https://itunes.apple.com/us/artist/land-of-fires/1262063264"
+      "https://itunes.apple.com/us/artist/land-of-fires/1262063264",
       "https://landoffires.bandcamp.com",
       "https://open.spotify.com/artist/78hn6dX6DEFy5qMuQ7Sgio",
       "https://soundcloud.com/landoffiresband",
       "https://twitter.com/landoffiresband",
-      "https://www.facebook.com/landoffiresband",
+      "https://www.facebook.com/landoffiresband"
     ]
   };
 
