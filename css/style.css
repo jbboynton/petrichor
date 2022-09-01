@@ -36,7 +36,7 @@
 .list-group-item {
   border-radius: 0 !important;
   padding: 0.33rem 1.25rem !important;
-  opacity: 0.85;
+  background-color: rgba(214, 216, 219, 0.77);
 }
 
 html,
@@ -191,6 +191,10 @@ h2 {
 
 .unworthy {
   display: none;
+}
+
+.track-list p {
+  line-height: 1.3;
 }
 
 @media only screen and (min-width: 576px) {
