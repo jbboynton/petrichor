@@ -111,6 +111,7 @@ h2 {
 
 .scroll-y {
   overflow-y: scroll;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 .text-underline {
