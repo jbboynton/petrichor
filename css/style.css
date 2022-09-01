@@ -90,6 +90,7 @@ body {
   color: #91a89a;
   font-family: "Source Code Pro", monospace;
   height: 100%;
+  position: fixed;
   width: 100%;
 }
 
