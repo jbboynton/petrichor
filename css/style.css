@@ -92,6 +92,8 @@ body {
   height: 100%;
   position: fixed;
   width: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 h1 {
@@ -108,11 +110,6 @@ h2 {
 
 .mw-575 {
   max-width: 575px;
-}
-
-.scroll-y {
-  overflow-y: scroll;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 .text-underline {
